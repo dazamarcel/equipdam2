@@ -1,0 +1,12 @@
+													<button class="responderBtn" value="<?php echo $fila['idFak']; ?>">Responder Fak</button>
+													<?php if($usuari==user($fila['iduser'])){ ?>
+														<form id="formEliminarFak" action="delete.php" method="post" enctype="multipart/form-data">
+															<input type="hidden" name="idFak" value="<?php echo $fila['idFak']; ?>">
+															<button type="submit">Eliminar Fak</button>
+														</form>
+
+													<?php } ?>
+													<form id="RespuestasFak" action="respuestas.php" method="post" enctype="multipart/form-data">
+														<input type="hidden" name="idFak" value="<?php echo $fila['idFak']; ?>">
+														<button type="submit">Ver Respuestas</button>
+													</form>
